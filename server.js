@@ -18,7 +18,7 @@ const express =require('express');
 const hbs = require('hbs');
 const path = require('path');
 const fs = require('fs');
-
+const port = 3000;
 
 const app = express();
 app.set('view engine', 'hbs');
@@ -58,8 +58,8 @@ app.get('/',(req,res) =>{
         win : 'Workinnet.ir',
     });
 })
-app.listen('3000',() =>{
-    console.log('server in running on port 3000');
+app.listen(port ,() =>{
+    console.log(` server in running on port #{port}`);
 });
 
 app.get('/api/sayHello',(req,res) =>{
